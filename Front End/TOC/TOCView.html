@@ -1,0 +1,66 @@
+<html ng-app= "myApp.TOCView" ng-controller="TOCCtrl">
+<head>
+  <link rel="stylesheet" href="../app.css">
+</head>
+<body class = "ng-cloak">
+  <header>
+  </header>
+  <!-- <div class="sidenav" dynamic="$root.path"></div> -->
+
+<!-- Namespace changing is currently commented out because it is buggy when routing is not implemented
+    The URL will change to include text=?%SYS or whatever your namespace is. If you want to change Namespace
+    temporarily
+-->
+  <!-- <form ng-submit="changeNamespace()" ng-controller="ExampleController">
+    Enter text and hit enter:
+    <input type="text" ng-model="text" name="text" />
+    <input type="submit" id="submit" value="Submit" />
+  </form> -->
+
+  <h3 style = "padding-top:10px; padding-left: 10px;">Table of Contents:</h3> <hr>
+    <div ng-repeat = "package in TOCPackages">
+        <!-- <p>{{baseURL + 'package/' + encodeURI(package)}} {{encodeURI(package)}}</p> -->
+      <a class = tocitem ng-click="showPackage(package)">{{package}}</a>
+    </div>
+
+    <div dynamic = "TOCTable"></div>
+    <p id="demo"></p>
+
+
+
+
+
+
+
+  <!-- <div class="card" ng-repeat="methodType in methods">
+    <div class="container">
+      <h4><b>{{folder.text}}</b></h4>
+      <p>{{folder.subtitle}}</p>
+    </div>
+
+    <div class="content">
+      <ul>
+        <li ng-repeat="sub in folder.children">
+          {{sub.text}}
+          <br>
+          {{sub.subtitle}}
+
+          <div class="pages">
+            <ul>
+              <li ng-repeat="page in sub.children">
+                {{page.text}}
+                <br>
+                {{page.subtitle}}
+              </li>
+            </ul>
+          </div>
+
+        </li>
+      </ul>
+    </div>
+
+  </div> -->
+
+</body>
+
+</html>

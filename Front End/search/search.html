@@ -1,0 +1,26 @@
+<html>
+<head>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../app.css">
+</head>
+<body class = "ng-cloak">
+
+  <div class="no-indent">
+    <div class="form-group search">
+      <label class="control-label" for="search">Search words:</label>
+      <form>
+        <input type="search" class="form-control" placeholder="Search" ng-model="search.phrase">
+        <button type="submit" class="btn btn-default" ng-click="getSearchResults()">Submit</button>
+      <form>
+    </div>
+
+    <uib-tabset active="activeJustified" justified="true">
+      <uib-tab index="0" heading="Classes"><p class="results" dynamic="classResults"></p></uib-tab>
+      <uib-tab index="1" heading="Methods"><p class="results" dynamic="methodResults"></p></uib-tab>
+      <uib-tab index="2" heading="Properties"><p class="results" dynamic="propResults"></p></uib-tab>
+      <uib-tab index="3" heading="Parameters"><p class="results" dynamic="paramResults"></p></uib-tab>
+    </uib-tabset>
+  </div>
+
+</body>
+</html>

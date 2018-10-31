@@ -1,0 +1,18 @@
+<html>
+<head>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../app.css">
+</head>
+<body class ="ng-cloak">
+  <div class="main classPage">
+    <h2 class="classTitle" ng-bind="className"></h2>
+    <div dynamic="classInfo"></div>
+    <div dynamic="methodTable"></div>
+    <div dynamic="propertiesTable"></div>
+    <div dynamic="methodBoxes"></div>
+    <div dynamic="propertyBoxes"></div>
+    <div dynamic="parameters"></div>
+  </div>
+  <div class="sidenav classPage" dynamic="$root.path"></div>
+</body>
+</html>

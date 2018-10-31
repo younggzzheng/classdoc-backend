@@ -1,0 +1,15 @@
+<html>
+<head>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../app.css">
+</head>
+<body class = "ng-cloak">
+  <div class="main classPage">
+    <h2 class="classTitle" ng-bind="packageName"></h2>
+    <div id = "subpackages" dynamic="Subpackages"></div>
+    <div id = "subclasses" dynamic="Subclasses"></div>
+  </div>
+  <div class="sidenav classPage" dynamic="$root.path"></div>
+</body>
+
+</html>
